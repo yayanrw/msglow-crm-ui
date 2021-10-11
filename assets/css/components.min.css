@@ -4,7 +4,7 @@ html body .content.app-content {
 }
 .navigation,
 .navigation .navigation-header {
-  font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+  font-family: "Inter", sans-serif;
 }
 html {
   font-size: 14px;
@@ -25,9 +25,6 @@ html body .content.app-content .content-overlay {
   right: 0;
   top: 0;
   bottom: 0;
-}
-html body.fixed-navbar {
-  padding-top: 4rem;
 }
 html body .container.app-content.show-overlay .content-overlay {
   z-index: 10;

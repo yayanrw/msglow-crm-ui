@@ -1028,9 +1028,6 @@ html [type="button"] {
 .navbar-dark .navbar-nav .disabled.nav-link {
   color: #98a4b8;
 }
-.navbar-semi-dark {
-  background: #fff;
-}
 .navbar-semi-dark .navbar-header {
   background: #404e67;
 }
