@@ -819,7 +819,7 @@ html [type="button"] {
   height: 4rem;
   float: left;
   position: relative;
-  padding: 0 1rem;
+  padding: 0;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
@@ -1029,7 +1029,7 @@ html [type="button"] {
   color: #98a4b8;
 }
 .navbar-semi-dark .navbar-header {
-  background: #404e67;
+  background: #2e2e4c;
 }
 .navbar-semi-dark .navbar-header .brand-text {
   color: #fff;
