@@ -115,13 +115,13 @@
             </div>
             <div class="content-body pt-2">
                 <!-- Description -->
-                <section id="data_diri_pelapor" class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Form Pengaduan</h4>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-body pt-0">
-                            <form id="frm_form_pengaduan" class="form form-horizontal">
+                <form id="frm_pengaduan" class="form form-horizontal">
+                    <section id="data_diri_pelapor" class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Form Pengaduan</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body pt-0">
                                 <div class="form-body p-1 pt-0">
                                     <h4 class="form-section text-secondary m-0" style="line-height: 1.75rem;">
                                         <i class="far fa-user mr-1"></i>
@@ -198,14 +198,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                </section>
-                <section id="data_terlapor" class="card">
-                    <div class="card-content">
-                        <div class="card-body pt-0">
-                            <form class="form form-horizontal">
+                    </section>
+                    <section id="data_terlapor" class="card">
+                        <div class="card-content">
+                            <div class="card-body pt-0">
                                 <div class="form-body p-1 pt-0">
                                     <h4 class="form-section text-secondary m-0" style="line-height: 1.75rem;">
                                         <i class="far fa-user mr-1"></i>
@@ -251,7 +249,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="no_telp_terlapor">No. HP
+                                        <label class="col-md-2 label-control text-left" for="no_telp_terlapor">No.
+                                            HP
                                             Terlapor
                                             Number</label>
                                         <div class="col-md-10">
@@ -269,14 +268,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                </section>
-                <section id="data_terlapor" class="card">
-                    <div class="card-content">
-                        <div class="card-body pt-0">
-                            <form class="form form-horizontal">
+                    </section>
+                    <section id="data_terlapor" class="card">
+                        <div class="card-content">
+                            <div class="card-body pt-0">
                                 <div class="form-body p-1 pt-0">
                                     <h4 class="form-section text-secondary m-0">
                                         <i class="fas fa-file-signature"></i>
@@ -299,35 +296,40 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_1">Bukti 1</label>
+                                        <label class="col-md-2 label-control text-left" for="bukti_1">Bukti
+                                            1</label>
                                         <div class="col-md-10">
                                             <input type="file" id="bukti_1" class="form-control"
                                                 placeholder="Please type your full name" name="bukti_1">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_2">Bukti 2</label>
+                                        <label class="col-md-2 label-control text-left" for="bukti_2">Bukti
+                                            2</label>
                                         <div class="col-md-10">
                                             <input type="file" id="bukti_2" class="form-control"
                                                 placeholder="Please type your full name" name="bukti_2">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_3">Bukti 3</label>
+                                        <label class="col-md-2 label-control text-left" for="bukti_3">Bukti
+                                            3</label>
                                         <div class="col-md-10">
                                             <input type="file" id="bukti_3" class="form-control"
                                                 placeholder="Please type your full name" name="bukti_3">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_4">Bukti 4</label>
+                                        <label class="col-md-2 label-control text-left" for="bukti_4">Bukti
+                                            4</label>
                                         <div class="col-md-10">
                                             <input type="file" id="bukti_4" class="form-control"
                                                 placeholder="Please type your full name" name="bukti_4">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_5">Bukti 5</label>
+                                        <label class="col-md-2 label-control text-left" for="bukti_5">Bukti
+                                            5</label>
                                         <div class="col-md-10">
                                             <input type="file" id="bukti_5" class="form-control"
                                                 placeholder="Please type your full name" name="bukti_5">
@@ -337,14 +339,15 @@
                                     <p style="color: #98a4b8;" class="text-italic font-small-2">* Maximum file size
                                         untuk upload 2MB</p>
                                 </div>
-                            </form>
+                            </div>
                         </div>
+                    </section>
+                    <div class="row justify-content-center">
+                        <a href="../index.html" class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">CANCEL</a>
+                        <button id="btn_submit" type="submit" class="btn btn-custom-2 btn-md ml-1 mr-1 pl-3 pr-3"
+                            onclick="btnSubmit()">SUBMIT</button>
                     </div>
-                </section>
-                <div class="row justify-content-center">
-                    <a href="../index.html" class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">CANCEL</a>
-                    <a href="./success_submit.html" class="btn btn-custom-2 btn-md ml-1 mr-1 pl-3 pr-3">SUBMIT</a>
-                </div>
+                </form>
                 <!--/ Description -->
             </div>
         </div>
@@ -387,10 +390,58 @@
     <script>
         $(function () {
             'use strict';
-            if ($('#frm_form_pengaduan').length) {
-                $('#frm_form_pengaduan').validate({
+            if ($('#frm_pengaduan').length) {
+                $('#frm_pengaduan').validate({
                     rules: {
+                        'jenis_laporan': {
+                            required: true
+                        },
                         'hal_yang_dilaporkan': {
+                            required: true
+                        },
+                        'nama_pelapor': {
+                            required: true
+                        },
+                        'no_hp_pelapor': {
+                            required: true
+                        },
+                        'alamat_pelapor': {
+                            required: true
+                        },
+                        'nama_terlapor': {
+                            required: true
+                        },
+                        'jenis_toko': {
+                            required: true
+                        },
+                        'akun_sosmed_terlapor': {
+                            required: true
+                        },
+                        'no_hp_terlapor': {
+                            required: true
+                        },
+                        'alamat_terlapor': {
+                            required: true
+                        },
+                        'kronologis': {
+                            required: true
+                        },
+                        'kota': {
+                            required: true
+                        },
+                        'bukti_1': {
+                            required: true
+                        },
+                        'bukti_2': {
+                            required: true
+                        },
+                        'bukti_3': {
+                            required: true
+                        },
+                        'bukti_4': {
+                            required: true
+                        },
+                        'bukti_5': {
                             required: true
                         },
                     }
