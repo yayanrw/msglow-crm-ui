@@ -37,6 +37,7 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="../assets/css/vertical-menu-modern.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/palette-gradient.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/form-validation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"
         integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -120,7 +121,7 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body pt-0">
-                            <form class="form form-horizontal">
+                            <form id="frm_form_pengaduan" class="form form-horizontal">
                                 <div class="form-body p-1 pt-0">
                                     <h4 class="form-section text-secondary m-0">
                                         <i class="far fa-user mr-1"></i>
@@ -367,6 +368,7 @@
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="../assets/js/prism.min.js"></script>
+    <script src="../assets/js/jqBootstrapValidation.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -382,6 +384,13 @@
         integrity="sha512-QMUqEPmhXq1f3DnAVdXvu40C8nbTgxvBGvNruP6RFacy3zWKbNTmx7rdQVVM2gkd2auCWhlPYtcW2tHwzso4SA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+            (function (window, document, $) {
+                'use strict';
+
+                // Input, Select, Textarea validations except submit button
+                $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
+            })(window, document, jQuery);
+
         $("#no_hp_pelapor").intlTelInput({
             initialCountry: "id",
             separateDialCode: true,
