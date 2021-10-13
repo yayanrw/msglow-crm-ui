@@ -123,7 +123,7 @@
                         <div class="card-body pt-0">
                             <form id="frm_form_pengaduan" class="form form-horizontal">
                                 <div class="form-body p-1 pt-0">
-                                    <h4 class="form-section text-secondary m-0">
+                                    <h4 class="form-section text-secondary m-0" style="line-height: 1.75rem;">
                                         <i class="far fa-user mr-1"></i>
                                         Data
                                         Diri
@@ -207,7 +207,7 @@
                         <div class="card-body pt-0">
                             <form class="form form-horizontal">
                                 <div class="form-body p-1 pt-0">
-                                    <h4 class="form-section text-secondary m-0">
+                                    <h4 class="form-section text-secondary m-0" style="line-height: 1.75rem;">
                                         <i class="far fa-user mr-1"></i>
                                         Data Terlapor (Yang
                                         Dilaporkan)
@@ -383,13 +383,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"
         integrity="sha512-QMUqEPmhXq1f3DnAVdXvu40C8nbTgxvBGvNruP6RFacy3zWKbNTmx7rdQVVM2gkd2auCWhlPYtcW2tHwzso4SA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/jquery.validate.min.js"></script>
     <script>
-            (function (window, document, $) {
-                'use strict';
-
-                // Input, Select, Textarea validations except submit button
-                $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
-            })(window, document, jQuery);
+        $(function () {
+            'use strict';
+            if ($('#frm_form_pengaduan').length) {
+                $('#frm_form_pengaduan').validate({
+                    rules: {
+                        'hal_yang_dilaporkan': {
+                            required: true
+                        },
+                    }
+                });
+            }
+        });
 
         $("#no_hp_pelapor").intlTelInput({
             initialCountry: "id",
@@ -408,7 +415,5 @@
 
 </body>
 <!-- END: Body-->
-
-<!-- Mirrored from pixinvent.com/stack-responsive-bootstrap-4-admin-template/html/ltr/vertical-modern-menu-template/layout-2-columns.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Oct 2021 02:47:56 GMT -->
 
 </html>
