@@ -37,6 +37,9 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="../assets/css/vertical-menu-modern.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/palette-gradient.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"
+        integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- END: Page CSS-->
 
 </head>
@@ -172,26 +175,16 @@
                                         <label class="col-md-2 label-control text-left" for="no_hp_pelapor">No. HP
                                             Pelapor</label>
                                         <div class="col-md-10">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">+62</span>
-                                                </div>
-                                                <input type="text" id="no_hp_pelapor" class="form-control"
-                                                    placeholder="Type your phone number" name="no_hp_pelapor">
-                                            </div>
+                                            <input type="tel" id="no_hp_pelapor" class="form-control"
+                                                placeholder="Type your phone number" name="no_hp_pelapor">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-2 label-control text-left" for="no_wa_pelapor">Whatsapp
                                             Number</label>
                                         <div class="col-md-10">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">+62</span>
-                                                </div>
-                                                <input type="text" id="no_wa_pelapor" class="form-control"
-                                                    placeholder="type your whatsapp number" name="no_wa_pelapor">
-                                            </div>
+                                            <input type="tel" id="no_wa_pelapor" class="form-control"
+                                                placeholder="type your whatsapp number" name="no_wa_pelapor">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -261,13 +254,8 @@
                                             Terlapor
                                             Number</label>
                                         <div class="col-md-10">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">+62</span>
-                                                </div>
-                                                <input type="text" id="no_telp_terlapor" class="form-control"
-                                                    placeholder="Type phone number" name="no_telp_terlapor">
-                                            </div>
+                                            <input type="text" id="no_telp_terlapor" class="form-control"
+                                                placeholder="Type phone number" name="no_telp_terlapor">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -387,6 +375,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"
+        integrity="sha512-hkmipUFWbNGcKnR0nayU95TV/6YhJ7J9YUAkx4WLoIgrVr7w1NYz28YkdNFMtPyPeX1FrQzbfs3gl+y94uZpSw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"
+        integrity="sha512-QMUqEPmhXq1f3DnAVdXvu40C8nbTgxvBGvNruP6RFacy3zWKbNTmx7rdQVVM2gkd2auCWhlPYtcW2tHwzso4SA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $("#no_hp_pelapor").intlTelInput({
+            initialCountry: "id",
+            separateDialCode: true,
+        })
+        $("#no_wa_pelapor").intlTelInput({
+            initialCountry: "id",
+            separateDialCode: true,
+        })
+        $("#no_telp_terlapor").intlTelInput({
+            initialCountry: "id",
+            separateDialCode: true,
+        })
+    </script>
     <!-- END: Theme JS-->
 
 </body>
