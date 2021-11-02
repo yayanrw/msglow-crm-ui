@@ -160,7 +160,7 @@
                                     <div class="form-group row pt-1">
                                         <label class="col-md-2 label-control text-left" for="tanggal_pengaduan">Tanggal
                                             Pengaduan</label>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <input type="date" id="tanggal_pengaduan" class="form-control"
                                                 name="tanggal_pengaduan">
                                         </div>
@@ -171,9 +171,9 @@
                                         <div class="col-md-10">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="jenis_konsumen"
-                                                    id="jenis_konsumen_end_user" value="End User" checked>
+                                                    id="jenis_konsumen_end_user" value="General Customer" checked>
                                                 <label class="form-check-label" for="jenis_konsumen_end_user">
-                                                    End User
+                                                    General Customer
                                                 </label>
                                             </div>
                                             <div class="form-check">
@@ -191,21 +191,21 @@
                                         <div class="col-md-10">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_msglow_beauty" checked>
+                                                    id="departemen_msglow_beauty" value="Msglow Beauty" checked>
                                                 <label class="form-check-label" for="departemen_msglow_beauty">
                                                     Ms Glow Beauty
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_msglow_formen">
+                                                    id="departemen_msglow_formen" value="Msglow Formen">
                                                 <label class="form-check-label" for="departemen_msglow_formen">
                                                     Ms Glow Formen
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_ms_slim">
+                                                    id="departemen_ms_slim" value="MS Slim">
                                                 <label class="form-check-label" for="departemen_ms_slim">
                                                     MS Slim
                                                 </label>
@@ -313,28 +313,28 @@
                                         <div class="col-md-10">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_normal" checked>
+                                                    id="jenis_kulit_normal" value="Normal" checked>
                                                 <label class="form-check-label" for="jenis_kulit_normal">
                                                     Normal
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_kering">
+                                                    id="jenis_kulit_kering" value="Kering">
                                                 <label class="form-check-label" for="jenis_kulit_kering">
                                                     Kering
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_berminyak">
+                                                    id="jenis_kulit_berminyak" value="Berminyak">
                                                 <label class="form-check-label" for="jenis_kulit_berminyak">
                                                     Berminyak
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_kombinasi">
+                                                    id="jenis_kulit_kombinasi" value="Kombinasi">
                                                 <label class="form-check-label" for="jenis_kulit_kombinasi">
                                                     Kombinasi
                                                 </label>
@@ -380,7 +380,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-2 label-control text-left" for="expired_date">Expired
                                             Date</label>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <input type="date" id="expired_date" class="form-control"
                                                 name="expired_date">
                                         </div>
@@ -388,7 +388,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-2 label-control text-left" for="jumlah_produk">Jumlah
                                             Produk
-                                            yang Dikeluhkan (1 jenis produk yang sama), (contoh: 1pcs)</label>
+                                            yang Dikeluhkan (1 jenis produk yang sama), (contoh: 1 pcs)</label>
                                         <div class="col-md-10">
                                             <input type="text" id="jumlah_produk" class="form-control"
                                                 placeholder="Please type here" name="jumlah_produk">
@@ -403,10 +403,11 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_foto">Upload Foto
+                                        <label class="col-md-2 label-control text-left" for="bukti_produk">Upload Foto
                                             Produk</label>
                                         <div class="col-md-10">
-                                            <input type="file" id="bukti_foto" class="form-control" name="bukti_foto">
+                                            <input type="file" id="bukti_produk" class="form-control"
+                                                name="bukti_produk">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -419,31 +420,28 @@
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-md-2 label-control text-left"
-                                            for="frekuensi_penggunaan_produk">Frekuensi
+                                            for="frekuensi_penggunaan">Frekuensi
                                             Penggunakan Produk</label>
                                         <div class="col-md-10">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio"
-                                                    name="frekuensi_penggunaan_produk"
-                                                    id="frekuensi_penggunaan_lebih_2x" value="> 2x Sehari">
-                                                <label class="form-check-label" for="frekuensi_penggunaan_lebih_2x">
-                                                    Lebih dari 2x sehari
+                                                <input class="form-check-input" type="radio" name="frekuensi_penggunaan"
+                                                    id="frekuensi_penggunaan_1x" value="1x Sehari" checked>
+                                                <label class="form-check-label" for="frekuensi_penggunaan_1x">
+                                                    1x sehari
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio"
-                                                    name="frekuensi_penggunaan_produk" id="frekuensi_penggunaan_2x"
-                                                    value="2x Sehari">
+                                                <input class="form-check-input" type="radio" name="frekuensi_penggunaan"
+                                                    id="frekuensi_penggunaan_2x" value="2x Sehari">
                                                 <label class="form-check-label" for="frekuensi_penggunaan_2x">
                                                     2x sehari
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio"
-                                                    name="frekuensi_penggunaan_produk" id="frekuensi_penggunaan_1x"
-                                                    value="1x Sehari" checked>
-                                                <label class="form-check-label" for="frekuensi_penggunaan_1x">
-                                                    1x sehari
+                                                <input class="form-check-input" type="radio" name="frekuensi_penggunaan"
+                                                    id="frekuensi_penggunaan_lebih_2x" value="> 2x Sehari">
+                                                <label class="form-check-label" for="frekuensi_penggunaan_lebih_2x">
+                                                    Lebih dari 2x sehari
                                                 </label>
                                             </div>
                                         </div>
@@ -476,32 +474,32 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="jenis_keluhan">Jenis
+                                        <label class="col-md-2 label-control text-left" for="jenis_keluhan[]">Jenis
                                             Keluhan</label>
                                         <div class="col-md-10">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_tekstur" value="Tekstur">
                                                 <label class="form-check-label" for="jenis_keluhan_tekstur">
                                                     Tekstur
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_warna" value="Warna">
                                                 <label class="form-check-label" for="jenis_keluhan_warna">
                                                     Warna
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_bau" value="Bau">
                                                 <label class="form-check-label" for="jenis_keluhan_bau">
                                                     Bau
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_efek_setelah_penggunaan"
                                                     value="Efek Setelah Penggunaan">
                                                 <label class="form-check-label"
@@ -510,28 +508,28 @@
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_pengiriman" value="Pengiriman">
                                                 <label class="form-check-label" for="jenis_keluhan_pengiriman">
                                                     Pengiriman
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_bobot" value="Bobot">
                                                 <label class="form-check-label" for="jenis_keluhan_bobot">
                                                     Bobot
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_packaging" value="Packaging">
                                                 <label class="form-check-label" for="jenis_keluhan_packaging">
                                                     Packaging
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan"
+                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
                                                     id="jenis_keluhan_lain_lain" value="Lain-lain">
                                                 <label class="form-check-label" for="jenis_keluhan_lain_lain">
                                                     Lain-lain
@@ -554,17 +552,18 @@
                                         Data Pembelian Produk
                                     </h4>
                                     <div class="form-group row pt-2">
-                                        <label class="col-md-2 label-control text-left" for="tanggal_terima">Tanggal
+                                        <label class="col-md-2 label-control text-left"
+                                            for="tanggal_terima_produk">Tanggal
                                             Terima Produk MS GLOW</label>
-                                        <div class="col-md-4">
-                                            <input type="date" id="tanggal_terima" name="tanggal_terima"
+                                        <div class="col-md-3">
+                                            <input type="date" id="tanggal_terima_produk" name="tanggal_terima_produk"
                                                 class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row pt-2">
                                         <label class="col-md-2 label-control text-left"
                                             for="tanggal_pelaporan_keluhan">Tanggal Pelaporan Keluhan</label>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <input type="date" id="tanggal_pelaporan_keluhan"
                                                 name="tanggal_pelaporan_keluhan" class="form-control">
                                         </div>
@@ -648,11 +647,31 @@
             if ($('#frm_keluhan').length) {
                 $('#frm_keluhan').validate({
                     rules: {
+                        'tanggal_pengaduan': {
+                            required: true
+                        },
+                        'jenis_konsumen': {
+                            required: true
+                        },
+                        'departemen': {
+                            required: true
+                        },
+                        'nama_konsumen': {
+                            required: true
+                        },
+                        'no_hp_konsumen': {
+                            required: true,
+                            number: true
+                        },
+                        'alamat_konsumen': {
+                            required: true
+                        },
                         'nama_customer': {
                             required: true
                         },
                         'no_hp_customer': {
-                            required: true
+                            required: true,
+                            number: true
                         },
                         'usia_customer': {
                             required: true,
@@ -662,21 +681,9 @@
                             required: true
                         },
                         'jenis_kulit': {
-                            required: true
-                        },
-                        'bukti_surat_jalan': {
-                            required: true
-                        },
-                        'tanggal_terima_produk': {
-                            required: true
-                        },
-                        'tempat_pembelian_produk': {
-                            required: true
-                        },
-                        'tanggal_pelaporan_keluhan': {
                             required: true,
                         },
-                        'nama_produk': {
+                        'product_id': {
                             required: true
                         },
                         'batch_number': {
@@ -685,10 +692,25 @@
                         'expired_date': {
                             required: true
                         },
-                        'jumlah_produk_yang_dikeluhkan': {
+                        'jumlah_produk': {
                             required: true,
                         },
+                        'bukti_unboxing': {
+                            required: true
+                        },
+                        'bukti_foto': {
+                            required: true
+                        },
                         'produk_lain': {
+                            required: true
+                        },
+                        'tanggal_terima': {
+                            required: true
+                        },
+                        'tanggal_pelaporan_keluhan': {
+                            required: true
+                        },
+                        'tempat_pembelian': {
                             required: true
                         },
                     }
@@ -696,22 +718,22 @@
             }
         });
 
-        $("#no_hp_customer2").intlTelInput({
+        $("#no_hp_customer").intlTelInput({
             initialCountry: "id",
             separateDialCode: true,
         })
-        $("#no_hp_pelapor2").intlTelInput({
+        $("#no_hp_konsumen").intlTelInput({
             initialCountry: "id",
             separateDialCode: true,
         })
 
-        $("#frm_keluhan").submit(function () {
-            var iti = intlTelInput($("#no_hp_customer2"))
-            console.log($(iti.getNumber()))
-            alert('lol')
-            $("#no_hp_customer").val($("#no_hp_customer2").intlTelInput("getNumber"));
-            $("#no_hp_pelapor").val($("#no_hp_pelapor2").intlTelInput("getNumber"));
-        });
+        // $("#frm_keluhan").submit(function () {
+        //     var iti = intlTelInput($("#no_hp_customer2"))
+        //     console.log($(iti.getNumber()))
+        //     alert('lol')
+        //     $("#no_hp_customer").val($("#no_hp_customer2").intlTelInput("getNumber"));
+        //     $("#no_hp_pelapor").val($("#no_hp_pelapor2").intlTelInput("getNumber"));
+        // });
     </script>
     <!-- END: Theme JS-->
 
