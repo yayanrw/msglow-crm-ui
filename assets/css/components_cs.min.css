@@ -555,7 +555,7 @@ footer.footer-dark {
 .main-menu.menu-dark .navigation > li.active > a,
 .main-menu.menu-dark .navigation > li.hover > a,
 .main-menu.menu-dark .navigation > li:hover > a {
-  color: #c3c3c3;
+  color: #010101;
   background-color: #f7d78c;
 }
 .main-menu.menu-dark .navigation > li.active > a.mm-next,
