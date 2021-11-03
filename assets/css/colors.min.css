@@ -2276,6 +2276,24 @@ input:focus ~ .bg-success {
   background-color: #cdcdcd !important;
   color: #000 !important;
 }
+
+.btn-primary-cs {
+  background-color: #a8c79e !important;
+  color: #fff;
+}
+.btn-primary-cs:hover {
+  background-color: #80b96e !important;
+  color: #fff !important;
+}
+.btn-primary-cs:active,
+.btn-primary-cs:disabled {
+  background-color: #e7e7e7 !important;
+  color: #000 !important;
+}
+.btn-primary-cs:focus {
+  background-color: #80b96e !important;
+  color: #fff !important;
+}
 /* endcustom */
 .btn-outline-info {
   border-color: #2dcee3;
