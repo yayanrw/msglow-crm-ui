@@ -30,9 +30,9 @@
 
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap-extended_cs.min.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/components_cs.min.css">
     <!-- END: Theme CSS-->
 
     <!-- BEGIN: Page CSS-->
@@ -84,7 +84,7 @@
                     </li>
                     <li class="nav-item mr-auto p-1">
                         <a class="navbar-brand p-0" href="index.html">
-                            <img class="brand-logo" alt="MSGLOW CRM" src="../../assets/images/icons/msglow-logo.svg"
+                            <img class="brand-logo" alt="MSGLOW CRM" src="../../assets/images/icons/msglow-logo-dark.svg"
                                 width="200">
                         </a>
                     </li>
@@ -139,13 +139,14 @@
                     action="<?= base_url('CustomerService/Keluhan/Insert'); ?>" method="post">
                     <section id="form_pengaduan_produk" class="card">
                         <div class="card-header pb-1">
-                            <h4 class="text-bold-600">Form Pengaduan Produk</h4>
-                            <p class="pt-2 m-0">Terima kasih telah menghubungi MS Glow untuk memberikan feedback
-                                terhadap
-                                produk kami.
-                                Harap melakukan pengisian form ini secara lengkap. Form tersebut hanya untuk 1 jenis
-                                produk, jika berbeda produk mohon untuk mengisi kembali form ini. Bila ada pertanyaan,
-                                harap menghubungi Customer Care MS GLOW, Terima kasih. </p>
+                            <h2 class="text-bold-600" style="text-decoration: underline;">Form Pengaduan Produk</h4>
+                                <p class="m-0">Terima kasih telah menghubungi MS Glow untuk memberikan feedback
+                                    terhadap
+                                    produk kami. <br>
+                                    Harap melakukan pengisian form ini secara lengkap. Form tersebut hanya untuk 1 jenis
+                                    produk, jika berbeda produk mohon untuk mengisi kembali form ini. <br>
+                                    Bila ada pertanyaan,
+                                    harap menghubungi Customer Care MS GLOW, Terima kasih.</p>
                         </div>
                     </section>
                     <section id="data_pengaduan" class="card">
@@ -191,21 +192,21 @@
                                         <div class="col-md-10">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_msglow_beauty" value="Msglow Beauty" checked>
+                                                    id="departemen_msglow_beauty" value="msglowbeauty" checked>
                                                 <label class="form-check-label" for="departemen_msglow_beauty">
                                                     Ms Glow Beauty
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_msglow_formen" value="Msglow Formen">
+                                                    id="departemen_msglow_formen" value="msglowformen">
                                                 <label class="form-check-label" for="departemen_msglow_formen">
                                                     Ms Glow Formen
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_ms_slim" value="MS Slim">
+                                                    id="departemen_ms_slim" value="msslim">
                                                 <label class="form-check-label" for="departemen_ms_slim">
                                                     MS Slim
                                                 </label>
@@ -592,7 +593,7 @@
                         <a href="<?= base_url('CustomerService'); ?>"
                             class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">CANCEL</a>
                         <button id="btn_submit" type="submit"
-                            class="btn btn-custom-2 btn-md ml-1 mr-1 pl-3 pr-3">SUBMIT</button>
+                            class="btn btn-primary-cs btn-md ml-1 mr-1 pl-3 pr-3">SUBMIT</button>
                     </div>
                 </form>
                 <!--/ Description -->
