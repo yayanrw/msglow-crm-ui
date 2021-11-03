@@ -60,6 +60,12 @@
             padding: 0;
             resize: none;
         }
+
+        .iti {
+            position: relative;
+            display: inline-block;
+            height: 40px;
+        }
     </style>
 
     <!-- END: Page CSS-->
@@ -84,8 +90,8 @@
                     </li>
                     <li class="nav-item mr-auto p-1">
                         <a class="navbar-brand p-0" href="index.html">
-                            <img class="brand-logo" alt="MSGLOW CRM" src="../../assets/images/icons/msglow-logo-dark.svg"
-                                width="200">
+                            <img class="brand-logo" alt="MSGLOW CRM"
+                                src="../../assets/images/icons/msglow-logo-dark.svg" width="200">
                         </a>
                     </li>
                 </ul>
@@ -105,15 +111,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./track_keluhan.html">
-                        <i class="fas fa-search mr-1"></i>
-                        <span class="menu-title" data-i18n="Documentation">Track Keluhan</span>
+                    <a href="./form_konsultasi.html">
+                        <i class="fas fa-file-signature mr-1"></i>
+                        <span class="menu-title" data-i18n="Documentation">Form Konsultasi</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./form_konsultasi.html">
-                        <i class="fas fa-file-alt mr-1"></i>
-                        <span class="menu-title" data-i18n="Documentation">Form Konsultasi</span>
+                    <a href="./track_keluhan.html">
+                        <i class="fas fa-search mr-1"></i>
+                        <span class="menu-title" data-i18n="Documentation">Track Keluhan</span>
                     </a>
                 </li>
             </ul>
@@ -135,466 +141,524 @@
             </div>
             <div class="content-body pt-2">
                 <!-- Description -->
-                <form id="frm_keluhan" class="form form-horizontal"
+                <form id="frm_keluhan" class="form form-horizontal number-tab-steps wizard-circle"
                     action="<?= base_url('CustomerService/Keluhan/Insert'); ?>" method="post">
+
                     <section id="form_pengaduan_produk" class="card">
                         <div class="card-header pb-1">
                             <h2 class="text-bold-600" style="text-decoration: underline;">Form Pengaduan Produk</h4>
-                                <p class="m-0">Terima kasih telah menghubungi MS Glow untuk memberikan feedback
+                                <p class="pt-1 m-0">Terima kasih telah menghubungi MS Glow untuk memberikan feedback
                                     terhadap
                                     produk kami. <br>
-                                    Harap melakukan pengisian form ini secara lengkap. Form tersebut hanya untuk 1 jenis
+                                    Harap melakukan pengisian form ini secara lengkap. Form tersebut hanya untuk 1
+                                    jenis
                                     produk, jika berbeda produk mohon untuk mengisi kembali form ini. <br>
                                     Bila ada pertanyaan,
                                     harap menghubungi Customer Care MS GLOW, Terima kasih.</p>
                         </div>
                     </section>
-                    <section id="data_pengaduan" class="card">
-                        <div class="card-content">
-                            <div class="card-body pt-0">
-                                <div class="form-body p-1 pt-0">
-                                    <h4 class="form-section text-secondary m-0 text-bold-600"
-                                        style="line-height: 1.75rem;">
-                                        <i class="far fa-user mr-1"></i>
-                                        Data Pengaduan
-                                    </h4>
-                                    <div class="form-group row pt-1">
-                                        <label class="col-md-2 label-control text-left" for="tanggal_pengaduan">Tanggal
-                                            Pengaduan</label>
-                                        <div class="col-md-3">
-                                            <input type="date" id="tanggal_pengaduan" class="form-control"
-                                                name="tanggal_pengaduan">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left"
-                                            for="jenis_konsumen">Konsumen</label>
-                                        <div class="col-md-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_konsumen"
-                                                    id="jenis_konsumen_end_user" value="General Customer" checked>
-                                                <label class="form-check-label" for="jenis_konsumen_end_user">
-                                                    General Customer
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_konsumen"
-                                                    id="jenis_konsumen_seller" value="Seller">
-                                                <label class="form-check-label" for="jenis_konsumen_seller">
-                                                    Seller
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left"
-                                            for="departemen">Departemen</label>
-                                        <div class="col-md-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_msglow_beauty" value="msglowbeauty" checked>
-                                                <label class="form-check-label" for="departemen_msglow_beauty">
-                                                    Ms Glow Beauty
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_msglow_formen" value="msglowformen">
-                                                <label class="form-check-label" for="departemen_msglow_formen">
-                                                    Ms Glow Formen
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="departemen"
-                                                    id="departemen_ms_slim" value="msslim">
-                                                <label class="form-check-label" for="departemen_ms_slim">
-                                                    MS Slim
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="data_konsumen" class="card">
-                        <div class="card-content">
-                            <div class="card-body pt-0">
-                                <div class="form-body p-1 pt-0">
-                                    <h4 class="form-section text-secondary m-0 pt-1 text-bold-600"
-                                        style="line-height: 1.75rem;">
-                                        <i class="far fa-user mr-1"></i>
-                                        Data Konsumen
-                                    </h4>
-                                    <p style="color: #98a4b8;padding-top: 0.5rem;" class="text-italic font-small-2">
-                                        *Identitas Konsumen / Pelanggan dilindungi oleh MSGLOW Office dan akan menjadi
-                                        rahasia perusahaan</p>
-                                    <div class="form-group row pt-2">
-                                        <label class="col-md-2 label-control text-left" for="nama_konsumen">Nama
-                                            Konsumen</label>
-                                        <div class="col-md-10">
-                                            <input type="text" id="nama_konsumen" name="nama_konsumen"
-                                                class="form-control" placeholder="Please type your full name">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="no_hp_pelapor">No.
-                                            HP
-                                            Konsumen</label>
-                                        <div class="col-md-10">
-                                            <input type="number" id="no_hp_konsumen" class="form-control"
-                                                placeholder="e.g 8123456789" name="no_hp_konsumen">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="alamat_konsumen">Alamat
-                                            Konsumen</label>
-                                        <div class="col-md-10">
-                                            <textarea id="alamat_konsumen" rows="5" class="form-control"
-                                                name="alamat_konsumen"
-                                                placeholder="Please type your address here"></textarea>
-                                        </div>
-                                    </div>
-                                    <p style="color: #98a4b8;" class="text-italic font-small-2">
-                                        *Maksimum file size untuk upload 2 MB</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
 
-                    <section id="data_diri_customer" class="card">
-                        <div class="card-content">
-                            <div class="card-body pt-0">
-                                <div class="form-body p-1 pt-0">
-                                    <h4 class="form-section text-secondary m-0 pt-1 text-bold-600"
-                                        style="line-height: 1.75rem;">
-                                        <i class="far fa-user mr-1"></i>
-                                        Data Diri Customer
-                                    </h4>
-                                    <p style="color: #98a4b8;padding-top: 0.5rem;" class="text-italic font-small-2">
-                                        *Identitas Customer / Pelanggan dilindungi oleh MSGLOW Office dan akan menjadi
-                                        rahasia perusahaan</p>
-                                    <div class="form-group row pt-2">
-                                        <label class="col-md-2 label-control text-left" for="nama_customer">Nama
-                                            Customer</label>
-                                        <div class="col-md-10">
-                                            <input type="text" id="nama_customer" name="nama_customer"
-                                                class="form-control" placeholder="Please type your full name">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="no_hp_customer">No.
-                                            HP
-                                            Customer</label>
-                                        <div class="col-md-10">
-                                            <input type="number" id="no_hp_customer" class="form-control"
-                                                placeholder="e.g 8123456789" name="no_hp_customer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row pt-2">
-                                        <label class="col-md-2 label-control text-left" for="usia_customer">Usia
-                                            Customer</label>
-                                        <div class="col-md-10">
-                                            <input type="number" id="usia_customer" name="usia_customer"
-                                                class="form-control" placeholder="Tulis angka usia customer, e.g 21">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="alamat_customer">Alamat
-                                            Customer</label>
-                                        <div class="col-md-10">
-                                            <textarea id="alamat_customer" rows="5" class="form-control"
-                                                name="alamat_customer"
-                                                placeholder="Please type your address here"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="jenis_kulit">Jenis Kulit
-                                            (Wajah)</label>
-                                        <div class="col-md-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_normal" value="Normal" checked>
-                                                <label class="form-check-label" for="jenis_kulit_normal">
-                                                    Normal
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_kering" value="Kering">
-                                                <label class="form-check-label" for="jenis_kulit_kering">
-                                                    Kering
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_berminyak" value="Berminyak">
-                                                <label class="form-check-label" for="jenis_kulit_berminyak">
-                                                    Berminyak
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="jenis_kulit"
-                                                    id="jenis_kulit_kombinasi" value="Kombinasi">
-                                                <label class="form-check-label" for="jenis_kulit_kombinasi">
-                                                    Kombinasi
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="data_terlapor" class="card">
-                        <div class="card-content">
-                            <div class="card-body pt-0">
-                                <div class="form-body p-1 pt-0">
-                                    <h4 class="form-section text-secondary m-0 pt-1 text-bold-600">
-                                        <i class="fas fa-file-signature mr-1"></i>
-                                        Detail Produk & Keluhan
-                                    </h4>
-                                    <div class="form-group row pt-2">
-                                        <label class="col-md-2 label-control text-left" for="product_id">Nama
-                                            Produk</label>
-                                        <div class="col-md-10">
-                                            <select class="select2 form-control" name="product_id" id="product_id">
-                                                <option value="">- Pilih Produk -</option>
-                                                <?php
-                                                foreach ($produk as $key) { ?>
-                                                <option value="<?= $key->product_id; ?>">
-                                                    <?= $key->product_name; ?>
-                                                </option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="batch_number">Kode Batch
-                                            Number</label>
-                                        <div class="col-md-10">
-                                            <input type="text" id="batch_number" class="form-control"
-                                                placeholder="Please type here" name="batch_number">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="expired_date">Expired
-                                            Date</label>
-                                        <div class="col-md-3">
-                                            <input type="date" id="expired_date" class="form-control"
-                                                name="expired_date">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="jumlah_produk">Jumlah
-                                            Produk
-                                            yang Dikeluhkan (1 jenis produk yang sama), (contoh: 1 pcs)</label>
-                                        <div class="col-md-10">
-                                            <input type="text" id="jumlah_produk" class="form-control"
-                                                placeholder="Please type here" name="jumlah_produk">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_unboxing">Upload
-                                            Bukti Video Unboxing</label>
-                                        <div class="col-md-10">
-                                            <input type="file" id="bukti_unboxing" class="form-control"
-                                                name="bukti_unboxing">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_produk">Upload Foto
-                                            Produk</label>
-                                        <div class="col-md-10">
-                                            <input type="file" id="bukti_produk" class="form-control"
-                                                name="bukti_produk">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="produk_lain">Produk Lain
-                                            yang Digunakan bersama Produk MS GLOW</label>
-                                        <div class="col-md-10">
-                                            <input type="text" id="produk_lain" class="form-control"
-                                                placeholder="Please type here" name="produk_lain">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left"
-                                            for="frekuensi_penggunaan">Frekuensi
-                                            Penggunakan Produk</label>
-                                        <div class="col-md-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="frekuensi_penggunaan"
-                                                    id="frekuensi_penggunaan_1x" value="1x Sehari" checked>
-                                                <label class="form-check-label" for="frekuensi_penggunaan_1x">
-                                                    1x sehari
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="frekuensi_penggunaan"
-                                                    id="frekuensi_penggunaan_2x" value="2x Sehari">
-                                                <label class="form-check-label" for="frekuensi_penggunaan_2x">
-                                                    2x sehari
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="frekuensi_penggunaan"
-                                                    id="frekuensi_penggunaan_lebih_2x" value="> 2x Sehari">
-                                                <label class="form-check-label" for="frekuensi_penggunaan_lebih_2x">
-                                                    Lebih dari 2x sehari
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="lama_pemakaian">Lama
-                                            Pemakaian Produk</label>
-                                        <div class="col-md-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lama_pemakaian"
-                                                    id="lama_pemakaian_1x" value="1 hari" checked>
-                                                <label class="form-check-label" for="lama_pemakaian_1x">
-                                                    1 hari
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lama_pemakaian"
-                                                    id="lama_pemakaian_2x" value="2 hari">
-                                                <label class="form-check-label" for="lama_pemakaian_2x">
-                                                    2 hari
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="lama_pemakaian"
-                                                    id="lama_pemakaian_lebih_2x" value="> 2 hari">
-                                                <label class="form-check-label" for="lama_pemakaian_lebih_2x">
-                                                    Lebih dari 2 hari
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="jenis_keluhan[]">Jenis
-                                            Keluhan</label>
-                                        <div class="col-md-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_tekstur" value="Tekstur">
-                                                <label class="form-check-label" for="jenis_keluhan_tekstur">
-                                                    Tekstur
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_warna" value="Warna">
-                                                <label class="form-check-label" for="jenis_keluhan_warna">
-                                                    Warna
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_bau" value="Bau">
-                                                <label class="form-check-label" for="jenis_keluhan_bau">
-                                                    Bau
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_efek_setelah_penggunaan"
-                                                    value="Efek Setelah Penggunaan">
-                                                <label class="form-check-label"
-                                                    for="jenis_keluhan_efek_setelah_penggunaan">
-                                                    Efek Setelah Penggunaan
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_pengiriman" value="Pengiriman">
-                                                <label class="form-check-label" for="jenis_keluhan_pengiriman">
-                                                    Pengiriman
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_bobot" value="Bobot">
-                                                <label class="form-check-label" for="jenis_keluhan_bobot">
-                                                    Bobot
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_packaging" value="Packaging">
-                                                <label class="form-check-label" for="jenis_keluhan_packaging">
-                                                    Packaging
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="jenis_keluhan[]"
-                                                    id="jenis_keluhan_lain_lain" value="Lain-lain">
-                                                <label class="form-check-label" for="jenis_keluhan_lain_lain">
-                                                    Lain-lain
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="data_pembelian_produk" class="card">
-                        <div class="card-content">
-                            <div class="card-body pt-0">
-                                <div class="form-body p-1 pt-0">
-                                    <h4 class="form-section text-secondary m-0 pt-1 text-bold-600"
-                                        style="line-height: 1.75rem;">
-                                        <i class="far fa-user mr-1"></i>
-                                        Data Pembelian Produk
-                                    </h4>
-                                    <div class="form-group row pt-2">
-                                        <label class="col-md-2 label-control text-left"
-                                            for="tanggal_terima_produk">Tanggal
-                                            Terima Produk MS GLOW</label>
-                                        <div class="col-md-3">
-                                            <input type="date" id="tanggal_terima_produk" name="tanggal_terima_produk"
-                                                class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row pt-2">
-                                        <label class="col-md-2 label-control text-left"
-                                            for="tanggal_pelaporan_keluhan">Tanggal Pelaporan Keluhan</label>
-                                        <div class="col-md-3">
-                                            <input type="date" id="tanggal_pelaporan_keluhan"
-                                                name="tanggal_pelaporan_keluhan" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="alamat_customer">Tempat
-                                            Pembelian Produk MS GLOW (Nama dan Alamat)</label>
-                                        <div class="col-md-10">
-                                            <textarea id="alamat_customer" rows="5" class="form-control"
-                                                name="alamat_customer"
-                                                placeholder="Tulis nama toko & Alamat toko"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 label-control text-left" for="bukti_foto">Upload bukti
-                                            surat jalan / nota pembelian (max. 2 MB)</label>
-                                        <div class="col-md-10">
-                                            <input type="file" id="bukti_foto" class="form-control" name="bukti_foto">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="row justify-content-center">
-                        <a href="<?= base_url('CustomerService'); ?>"
-                            class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">CANCEL</a>
-                        <button id="btn_submit" type="submit"
-                            class="btn btn-primary-cs btn-md ml-1 mr-1 pl-3 pr-3">SUBMIT</button>
+                    <div class="row justify-content-start">
+                        <button type="button" class="btn btn-md ml-1 mr-1 pl-3 pr-3 mb-2 bg-white"
+                            style="border-color: #A8C79E;color: #80B96E;">Step <span id="current_page"></span> /
+                            4</button>
                     </div>
+
+                    <fieldset id="form-wizard-1">
+                        <section id="data_pengaduan" class="card">
+                            <div class="card-content">
+                                <div class="card-body pt-0">
+                                    <div class="form-body p-1 pt-0">
+                                        <h4 class="form-section text-secondary m-0 text-bold-600"
+                                            style="line-height: 1.75rem;">
+                                            <i class="far fa-user mr-1"></i>
+                                            Data Pengaduan
+                                        </h4>
+                                        <div class="form-group row pt-1">
+                                            <label class="col-md-2 label-control text-left"
+                                                for="tanggal_pengaduan">Tanggal
+                                                Pengaduan</label>
+                                            <div class="col-md-3">
+                                                <input type="date" id="tanggal_pengaduan" class="form-control"
+                                                    name="tanggal_pengaduan">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left"
+                                                for="jenis_konsumen">Konsumen</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="jenis_konsumen"
+                                                        id="jenis_konsumen_end_user" value="General Customer" checked>
+                                                    <label class="form-check-label" for="jenis_konsumen_end_user">
+                                                        General Customer
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="jenis_konsumen"
+                                                        id="jenis_konsumen_seller" value="Seller">
+                                                    <label class="form-check-label" for="jenis_konsumen_seller">
+                                                        Seller
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left"
+                                                for="departemen">Departemen</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="departemen"
+                                                        id="departemen_msglow_beauty" value="msglowbeauty" checked>
+                                                    <label class="form-check-label" for="departemen_msglow_beauty">
+                                                        Ms Glow Beauty
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="departemen"
+                                                        id="departemen_msglow_formen" value="msglowformen">
+                                                    <label class="form-check-label" for="departemen_msglow_formen">
+                                                        Ms Glow Formen
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="departemen"
+                                                        id="departemen_ms_slim" value="msslim">
+                                                    <label class="form-check-label" for="departemen_ms_slim">
+                                                        MS Slim
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="row justify-content-end">
+                            <a href="<?= base_url('CustomerService'); ?>"
+                                class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">CANCEL</a>
+                            <button id="btn_next" type="button" onclick="btnNext(2)"
+                                class="btn btn-primary-cs btn-md ml-1 mr-1 pl-3 pr-3">NEXT</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="form-wizard-2" style="display: none;">
+                        <section id="data_konsumen" class="card">
+                            <div class="card-content">
+                                <div class="card-body pt-0">
+                                    <div class="form-body p-1 pt-0">
+                                        <h4 class="form-section text-secondary m-0 pt-1 text-bold-600"
+                                            style="line-height: 1.75rem;">
+                                            <i class="far fa-user mr-1"></i>
+                                            Data Konsumen
+                                        </h4>
+                                        <p style="color: #98a4b8;padding-top: 0.5rem;" class="text-italic font-small-2">
+                                            *Identitas Konsumen / Pelanggan dilindungi oleh MSGLOW Office dan akan
+                                            menjadi
+                                            rahasia perusahaan</p>
+                                        <div class="form-group row pt-2">
+                                            <label class="col-md-2 label-control text-left" for="nama_konsumen">Nama
+                                                Konsumen</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="nama_konsumen" name="nama_konsumen"
+                                                    class="form-control" placeholder="Please type your full name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="no_hp_pelapor">No.
+                                                HP
+                                                Konsumen</label>
+                                            <div class="col-md-10">
+                                                <input type="number" id="no_hp_konsumen" class="form-control"
+                                                    placeholder="e.g 8123456789" name="no_hp_konsumen">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="alamat_konsumen">Alamat
+                                                Konsumen</label>
+                                            <div class="col-md-10">
+                                                <textarea id="alamat_konsumen" rows="5" class="form-control"
+                                                    name="alamat_konsumen"
+                                                    placeholder="Please type your address here"></textarea>
+                                            </div>
+                                        </div>
+                                        <p style="color: #98a4b8;" class="text-italic font-small-2">
+                                            *Maksimum file size untuk upload 2 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="data_diri_customer" class="card">
+                            <div class="card-content">
+                                <div class="card-body pt-0">
+                                    <div class="form-body p-1 pt-0">
+                                        <h4 class="form-section text-secondary m-0 pt-1 text-bold-600"
+                                            style="line-height: 1.75rem;">
+                                            <i class="far fa-user mr-1"></i>
+                                            Data Diri Customer
+                                        </h4>
+                                        <p style="color: #98a4b8;padding-top: 0.5rem;" class="text-italic font-small-2">
+                                            *Identitas Customer / Pelanggan dilindungi oleh MSGLOW Office dan akan
+                                            menjadi
+                                            rahasia perusahaan</p>
+                                        <div class="form-group row pt-2">
+                                            <label class="col-md-2 label-control text-left" for="nama_customer">Nama
+                                                Customer</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="nama_customer" name="nama_customer"
+                                                    class="form-control" placeholder="Please type your full name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="no_hp_customer">No.
+                                                HP
+                                                Customer</label>
+                                            <div class="col-md-10">
+                                                <input type="number" id="no_hp_customer" class="form-control"
+                                                    placeholder="e.g 8123456789" name="no_hp_customer">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row pt-2">
+                                            <label class="col-md-2 label-control text-left" for="usia_customer">Usia
+                                                Customer</label>
+                                            <div class="col-md-10">
+                                                <input type="number" id="usia_customer" name="usia_customer"
+                                                    class="form-control"
+                                                    placeholder="Tulis angka usia customer, e.g 21">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="alamat_customer">Alamat
+                                                Customer</label>
+                                            <div class="col-md-10">
+                                                <textarea id="alamat_customer" rows="5" class="form-control"
+                                                    name="alamat_customer"
+                                                    placeholder="Please type your address here"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="jenis_kulit">Jenis
+                                                Kulit
+                                                (Wajah)</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="jenis_kulit"
+                                                        id="jenis_kulit_normal" value="Normal" checked>
+                                                    <label class="form-check-label" for="jenis_kulit_normal">
+                                                        Normal
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="jenis_kulit"
+                                                        id="jenis_kulit_kering" value="Kering">
+                                                    <label class="form-check-label" for="jenis_kulit_kering">
+                                                        Kering
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="jenis_kulit"
+                                                        id="jenis_kulit_berminyak" value="Berminyak">
+                                                    <label class="form-check-label" for="jenis_kulit_berminyak">
+                                                        Berminyak
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="jenis_kulit"
+                                                        id="jenis_kulit_kombinasi" value="Kombinasi">
+                                                    <label class="form-check-label" for="jenis_kulit_kombinasi">
+                                                        Kombinasi
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="row justify-content-end">
+                            <button id="btn_back" type="button" onclick="btnNext(1)"
+                                class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">BACK</button>
+                            <button id="btn_next" type="button" onclick="btnNext(3)"
+                                class="btn btn-primary-cs btn-md ml-1 mr-1 pl-3 pr-3">NEXT</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="form-wizard-3" style="display: none;">
+                        <section id="detail_produk_keluhan" class="card">
+                            <div class="card-content">
+                                <div class="card-body pt-0">
+                                    <div class="form-body p-1 pt-0">
+                                        <h4 class="form-section text-secondary m-0 pt-1 text-bold-600">
+                                            <i class="fas fa-file-signature mr-1"></i>
+                                            Detail Produk & Keluhan
+                                        </h4>
+                                        <div class="form-group row pt-2">
+                                            <label class="col-md-2 label-control text-left" for="product_id">Nama
+                                                Produk</label>
+                                            <div class="col-md-10">
+                                                <select class="select2 form-control" name="product_id" id="product_id">
+                                                    <option value="">- Pilih Produk -</option>
+                                                    <?php
+                                                foreach ($produk as $key) { ?>
+                                                    <option value="<?= $key->product_id; ?>">
+                                                        <?= $key->product_name; ?>
+                                                    </option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="batch_number">Kode
+                                                Batch
+                                                Number</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="batch_number" class="form-control"
+                                                    placeholder="Please type here" name="batch_number">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="expired_date">Expired
+                                                Date</label>
+                                            <div class="col-md-3">
+                                                <input type="date" id="expired_date" class="form-control"
+                                                    name="expired_date">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="jumlah_produk">Jumlah
+                                                Produk
+                                                yang Dikeluhkan (1 jenis produk yang sama), (contoh: 1 pcs)</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="jumlah_produk" class="form-control"
+                                                    placeholder="Please type here" name="jumlah_produk">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="bukti_unboxing">Upload
+                                                Bukti Video Unboxing</label>
+                                            <div class="col-md-10">
+                                                <input type="file" id="bukti_unboxing" class="form-control"
+                                                    name="bukti_unboxing">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="bukti_produk">Upload
+                                                Foto
+                                                Produk</label>
+                                            <div class="col-md-10">
+                                                <input type="file" id="bukti_produk" class="form-control"
+                                                    name="bukti_produk">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="produk_lain">Produk
+                                                Lain
+                                                yang Digunakan bersama Produk MS GLOW</label>
+                                            <div class="col-md-10">
+                                                <input type="text" id="produk_lain" class="form-control"
+                                                    placeholder="Please type here" name="produk_lain">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left"
+                                                for="frekuensi_penggunaan">Frekuensi
+                                                Penggunakan Produk</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="frekuensi_penggunaan" id="frekuensi_penggunaan_1x"
+                                                        value="1x Sehari" checked>
+                                                    <label class="form-check-label" for="frekuensi_penggunaan_1x">
+                                                        1x sehari
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="frekuensi_penggunaan" id="frekuensi_penggunaan_2x"
+                                                        value="2x Sehari">
+                                                    <label class="form-check-label" for="frekuensi_penggunaan_2x">
+                                                        2x sehari
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="frekuensi_penggunaan" id="frekuensi_penggunaan_lebih_2x"
+                                                        value="> 2x Sehari">
+                                                    <label class="form-check-label" for="frekuensi_penggunaan_lebih_2x">
+                                                        Lebih dari 2x sehari
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="lama_pemakaian">Lama
+                                                Pemakaian Produk</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="lama_pemakaian"
+                                                        id="lama_pemakaian_1x" value="1 hari" checked>
+                                                    <label class="form-check-label" for="lama_pemakaian_1x">
+                                                        1 hari
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="lama_pemakaian"
+                                                        id="lama_pemakaian_2x" value="2 hari">
+                                                    <label class="form-check-label" for="lama_pemakaian_2x">
+                                                        2 hari
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="lama_pemakaian"
+                                                        id="lama_pemakaian_lebih_2x" value="> 2 hari">
+                                                    <label class="form-check-label" for="lama_pemakaian_lebih_2x">
+                                                        Lebih dari 2 hari
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="jenis_keluhan[]">Jenis
+                                                Keluhan</label>
+                                            <div class="col-md-10">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]" id="jenis_keluhan_tekstur"
+                                                        value="Tekstur">
+                                                    <label class="form-check-label" for="jenis_keluhan_tekstur">
+                                                        Tekstur
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]" id="jenis_keluhan_warna" value="Warna">
+                                                    <label class="form-check-label" for="jenis_keluhan_warna">
+                                                        Warna
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]" id="jenis_keluhan_bau" value="Bau">
+                                                    <label class="form-check-label" for="jenis_keluhan_bau">
+                                                        Bau
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]"
+                                                        id="jenis_keluhan_efek_setelah_penggunaan"
+                                                        value="Efek Setelah Penggunaan">
+                                                    <label class="form-check-label"
+                                                        for="jenis_keluhan_efek_setelah_penggunaan">
+                                                        Efek Setelah Penggunaan
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]" id="jenis_keluhan_pengiriman"
+                                                        value="Pengiriman">
+                                                    <label class="form-check-label" for="jenis_keluhan_pengiriman">
+                                                        Pengiriman
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]" id="jenis_keluhan_bobot" value="Bobot">
+                                                    <label class="form-check-label" for="jenis_keluhan_bobot">
+                                                        Bobot
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]" id="jenis_keluhan_packaging"
+                                                        value="Packaging">
+                                                    <label class="form-check-label" for="jenis_keluhan_packaging">
+                                                        Packaging
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="jenis_keluhan[]" id="jenis_keluhan_lain_lain"
+                                                        value="Lain-lain">
+                                                    <label class="form-check-label" for="jenis_keluhan_lain_lain">
+                                                        Lain-lain
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="row justify-content-end">
+                            <button id="btn_back" type="button" onclick="btnNext(2)"
+                                class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">BACK</button>
+                            <button id="btn_next" type="submit" onclick="btnNext(4)"
+                                class="btn btn-primary-cs btn-md ml-1 mr-1 pl-3 pr-3">NEXT</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="form-wizard-4" style="display: none;">
+                        <section id="data_pembelian_produk" class="card">
+                            <div class="card-content">
+                                <div class="card-body pt-0">
+                                    <div class="form-body p-1 pt-0">
+                                        <h4 class="form-section text-secondary m-0 pt-1 text-bold-600"
+                                            style="line-height: 1.75rem;">
+                                            <i class="far fa-user mr-1"></i>
+                                            Data Pembelian Produk
+                                        </h4>
+                                        <div class="form-group row pt-2">
+                                            <label class="col-md-2 label-control text-left"
+                                                for="tanggal_terima_produk">Tanggal
+                                                Terima Produk MS GLOW</label>
+                                            <div class="col-md-3">
+                                                <input type="date" id="tanggal_terima_produk"
+                                                    name="tanggal_terima_produk" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row pt-2">
+                                            <label class="col-md-2 label-control text-left"
+                                                for="tanggal_pelaporan_keluhan">Tanggal Pelaporan Keluhan</label>
+                                            <div class="col-md-3">
+                                                <input type="date" id="tanggal_pelaporan_keluhan"
+                                                    name="tanggal_pelaporan_keluhan" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="alamat_customer">Tempat
+                                                Pembelian Produk MS GLOW (Nama dan Alamat)</label>
+                                            <div class="col-md-10">
+                                                <textarea id="alamat_customer" rows="5" class="form-control"
+                                                    name="alamat_customer"
+                                                    placeholder="Tulis nama toko & Alamat toko"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-2 label-control text-left" for="bukti_foto">Upload
+                                                bukti
+                                                surat jalan / nota pembelian (max. 2 MB)</label>
+                                            <div class="col-md-10">
+                                                <input type="file" id="bukti_foto" class="form-control"
+                                                    name="bukti_foto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="row justify-content-end">
+                            <button id="btn_back" type="button" onclick="btnNext(3)"
+                                class="btn btn-custom-3 btn-md ml-1 mr-1 pl-3 pr-3">BACK</button>
+                            <button id="btn_submit" type="submit"
+                                class="btn btn-primary-cs btn-md ml-1 mr-1 pl-3 pr-3">SUBMIT</button>
+                        </div>
+                    </fieldset>
                 </form>
                 <!--/ Description -->
             </div>
@@ -639,9 +703,51 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- <script src="../../assets/js/form-select2.min.js"></script> -->
     <script>
+        let currentPage = 1
+
         $(document).ready(function () {
             $('#product_id').select2();
+            $('#current_page').text(currentPage)
         });
+
+        btnNext = (to) => {
+            if ($("#frm_keluhan").valid() || to < currentPage) {
+                currentPage = to
+                $('#current_page').text(currentPage)
+
+                switch (currentPage) {
+                    case 1:
+                        $('#form-wizard-1').css('display', 'block')
+                        $('#form-wizard-2').css('display', 'none')
+                        $('#form-wizard-3').css('display', 'none')
+                        $('#form-wizard-4').css('display', 'none')
+                        break;
+                    case 2:
+                        if ($('input[name="jenis_konsumen"]:checked').val() == 'General Customer') {
+                            $('#data_konsumen').css('display', 'none')
+                        } else {
+                            $('#data_konsumen').css('display', 'block')
+                        }
+                        $('#form-wizard-1').css('display', 'none')
+                        $('#form-wizard-2').css('display', 'block')
+                        $('#form-wizard-3').css('display', 'none')
+                        $('#form-wizard-4').css('display', 'none')
+                        break;
+                    case 3:
+                        $('#form-wizard-1').css('display', 'none')
+                        $('#form-wizard-2').css('display', 'none')
+                        $('#form-wizard-3').css('display', 'block')
+                        $('#form-wizard-4').css('display', 'none')
+                        break;
+                    case 4:
+                        $('#form-wizard-1').css('display', 'none')
+                        $('#form-wizard-2').css('display', 'none')
+                        $('#form-wizard-3').css('display', 'none')
+                        $('#form-wizard-4').css('display', 'block')
+                        break;
+                }
+            }
+        }
 
         $(function () {
             'use strict';
